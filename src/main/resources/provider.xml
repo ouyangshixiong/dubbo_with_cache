@@ -54,6 +54,8 @@
     </bean>
     <bean id="redisCacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
         <constructor-arg index="0" ref="redisTemplate" ></constructor-arg>
+        <!-- 过期时间 -->
+        <property name="defaultExpiration" value="60"></property>
     </bean>
 	
 	
