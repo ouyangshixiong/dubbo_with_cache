@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   	<properties>
 		<!-- Common libs -->
-		<spring_version>3.2.16.RELEASE</spring_version>
+		<spring_version>4.3.1.RELEASE</spring_version>
 		<javassist_version>3.20.0-GA</javassist_version>
 		<netty_version>3.2.5.Final</netty_version>
 		<mina_version>1.1.7</mina_version>
@@ -43,6 +43,7 @@
 		<junit_version>4.10</junit_version>
 		<easymock_version>3.0</easymock_version>
 		<jmockit_version>0.999.8</jmockit_version>
+		<dubbo_version>2.5.3</dubbo_version>
 		<!-- Build args -->
 		<argline>-server -Xms64m -Xmx256m -XX:PermSize=64m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true</argline>
 		<skip_maven_deploy>false</skip_maven_deploy>
@@ -64,7 +65,7 @@
 		<dependency>
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>dubbo</artifactId>
-		    <version>2.5.3</version>
+		    <version>${dubbo_version}</version>
 		    <exclusions>
 		    	<exclusion>
 		    		<groupId>org.springframework</groupId>
@@ -75,18 +76,28 @@
 	    <dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-context</artifactId>
-	        <version>4.3.1.RELEASE</version>
+	        <version>${spring_version}</version>
 	    </dependency>
 	    <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>4.3.1.RELEASE</version>
+			<version>${spring_version}</version>
 		</dependency>
 	    <dependency>
 		    <groupId>net.sf.ehcache</groupId>
 		    <artifactId>ehcache-core</artifactId>
 		    <version>2.6.11</version>
-		</dependency> 
+		</dependency>
+		<dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.7.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.7.3</version>
+        </dependency>
 			<dependency>
 				<groupId>org.javassist</groupId>
 				<artifactId>javassist</artifactId>

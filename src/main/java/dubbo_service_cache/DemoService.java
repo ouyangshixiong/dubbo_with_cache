@@ -8,5 +8,5 @@ public interface DemoService {
 	 * @param maxNumber
 	 * @return
 	 */
-	Long countLarge( Integer maxNumber ); 
+	Long countLarge( int maxNumber ); 
 }
