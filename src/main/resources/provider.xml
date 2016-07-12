@@ -61,6 +61,7 @@
 	    <property name="cacheManagers">
 	        <list>
 	            <ref bean="redisCacheManager"/>
+	            <ref bean="ehcacheManager"/>
 	        </list>
 	    </property>
 	    <!-- 都找不到时，不返回null，而是返回NOP的Cache -->
